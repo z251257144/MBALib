@@ -15,6 +15,11 @@ static char kDTActionHandlerLongPressGestureKey;
 
 @implementation UIView (ActionHandlers)
 
+- (UITapGestureRecognizer*)tapGestureRecognizer
+{
+    return objc_getAssociatedObject(self, &kDTActionHandlerTapGestureKey);
+}
+
 - (void)setTapActionWithBlock:(void (^)(void))block
 {
 	UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, &kDTActionHandlerTapGestureKey);

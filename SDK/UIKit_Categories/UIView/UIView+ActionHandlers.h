@@ -17,6 +17,8 @@
  @param block The block to execute.
  */
 - (void)setTapActionWithBlock:(void (^)(void))block;
+// Return the view's ViewController.
+@property (nonatomic, readonly) UITapGestureRecognizer *tapGestureRecognizer;
 
 /**
  Attaches the given block for a long press action to the receiver.
