@@ -8,7 +8,6 @@
 
 #import "UIGestureRecognizer+YYAdd.h"
 #import "ALActionBlockWrapper.h"
-#import <objc/runtime.h>
 
 @implementation UIGestureRecognizer (ALActionBlocks)
 

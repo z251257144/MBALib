@@ -9,8 +9,6 @@
 #import "UIImage+YYAdd.h"
 #import "UIDevice+YYAdd.h"
 #import "NSString+YYAdd.h"
-#import "YYKitMacro.h"
-
 
 //*****************************图片相关
 #pragma mark - 图片相关

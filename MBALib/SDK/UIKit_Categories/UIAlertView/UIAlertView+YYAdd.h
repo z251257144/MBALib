@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 MBALib. All rights reserved.
 //
 
-#pragma mark -
+#import "YYKitMacro.h"
 
 @interface UIAlertView (BBExtensions) <UIAlertViewDelegate>
 

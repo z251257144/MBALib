@@ -7,8 +7,7 @@
 //
 
 #import "UIApplication+YYAdd.h"
-#import "NSArray+YYAdd.h"
-#import "YYKitMacro.h"
+#import "NSString+YYAdd.h"
 
 DUMMY_CLASS(UIApplication_YYDebug)
 

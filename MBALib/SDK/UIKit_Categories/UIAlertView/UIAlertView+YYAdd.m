@@ -8,8 +8,6 @@
 
 #import "UIAlertView+YYAdd.h"
 
-#import <objc/runtime.h>
-
 #pragma mark -
 
 @implementation UIAlertView (BBExtensions)

@@ -337,7 +337,7 @@ static CGPathRef createPathFromXYValues(NSArray *xValues, NSArray *yValues) {
 	if (startValue == endValue) {
 		alpha = log2f(stiffnessCoefficient)/steps;
 	} else {
-		alpha = log2f(stiffnessCoefficient/fabsf(endValue - startValue))/steps;
+		alpha = log2f(stiffnessCoefficient/fabs(endValue - startValue))/steps;
 	}
 	if (alpha > 0) {
 		alpha = -1.0f*alpha;
@@ -367,7 +367,7 @@ static CGPathRef createPathFromXYValues(NSArray *xValues, NSArray *yValues) {
 		coefficient =  (startValue - endValue);
 
 		if (!self.shouldOvershoot) {
-			oscillationComponent =  fabsf(oscillationComponent);
+			oscillationComponent =  fabs(oscillationComponent);
 		}
 		
 		value = coefficient * pow(2.71, alpha*t) * oscillationComponent + endValue;

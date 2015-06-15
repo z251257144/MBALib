@@ -7,7 +7,6 @@
 //
 
 #import "UIScrollView+YYAdd.h"
-#import "YYKitMacro.h"
 
 DUMMY_CLASS(UIScrollView_YYDebug)
 

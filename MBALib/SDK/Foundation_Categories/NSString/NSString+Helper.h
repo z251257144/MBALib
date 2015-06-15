@@ -16,6 +16,8 @@
 //  all copies or substantial portions of the Software.
 //
 
+#import "YYKitMacro.h"
+
 enum {
 	NSTruncateStringPositionStart=0,
 	NSTruncateStringPositionMiddle,

@@ -8,8 +8,6 @@
 
 #import "UIBarButtonItem+YYAdd.h"
 #import "ALActionBlockWrapper.h"
-#import <objc/runtime.h>
-
 
 @implementation UIBarButtonItem (ALActionBlocks)
 

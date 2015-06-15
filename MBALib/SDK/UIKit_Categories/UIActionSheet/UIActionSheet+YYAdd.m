@@ -7,9 +7,6 @@
 //
 
 #import "UIActionSheet+YYAdd.h"
-#import <objc/runtime.h>
-
-#pragma mark -
 
 @implementation UIActionSheet (BBExtensions)
 

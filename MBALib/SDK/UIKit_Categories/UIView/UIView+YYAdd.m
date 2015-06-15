@@ -8,8 +8,6 @@
 
 #import "UIView+YYAdd.h"
 #import <QuartzCore/QuartzCore.h>
-#import "YYKitMacro.h"
-
 
 DUMMY_CLASS(UIView_YYAdd)
 

@@ -8,10 +8,8 @@
 
 #import "UIColor+YYAdd.h"
 #import "NSString+YYAdd.h"
-#import "YYKitMacro.h"
 
 DUMMY_CLASS(UIColor_YYDebug)
-
 
 #define CLAMP_COLOR_VALUE(v) (v) = (v) < 0 ? 0 : (v) > 1 ? 1 : (v)
 

@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 MBALib. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "YYKitMacro.h"
 
 @interface UIGestureRecognizer (ALActionBlocks)

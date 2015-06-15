@@ -7,6 +7,9 @@
 //
 
 // Methods to add simple block-based actions to UIViews.
+
+#import "YYKitMacro.h"
+
 @interface UIView (ActionHandlers)
 
 /**

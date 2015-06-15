@@ -10,7 +10,4 @@
 
 /******应用包Global基本文件--start*****/
 #import <QuartzCore/QuartzCore.h>
-#import "YYKitMacro.h"
-#import "YYKit.h"
-#import "Singleton.h"
 /******应用包Global基本文件--end*****/

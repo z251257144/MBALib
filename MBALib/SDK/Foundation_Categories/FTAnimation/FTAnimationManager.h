@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
-#import <UIKit/UIKit.h>
+#import "YYKitMacro.h"
 
 typedef enum _FTAnimationDirection {
   kFTAnimationTop = 0,

@@ -6,10 +6,16 @@
 //  Copyright (c) 2013 MBALib. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
 typedef void (^ALActionBlock)(id weakSender);
+
+#define IOS7_OR_LATER		( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+#define IOS7_OR_LESS		( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] == NSOrderedAscending )
+#define IOS6_OR_LATER		( [[[UIDevice currentDevice] systemVersion] compare:@"6.0"] != NSOrderedAscending )
+#define IOS5_OR_LATER		( [[[UIDevice currentDevice] systemVersion] compare:@"5.0"] != NSOrderedAscending )
 
 #define kUserDefaults                [NSUserDefaults standardUserDefaults]      //UserDefault
 #define kDegreesToRadian(x)         (M_PI * (x) / 180.0)    //弧度转角度

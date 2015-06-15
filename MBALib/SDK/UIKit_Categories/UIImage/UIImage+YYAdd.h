@@ -6,7 +6,7 @@
 //  Copyright 2013 ibireme.
 //
 
-#import <UIKit/UIKit.h>
+#import "YYKitMacro.h"
 
 #pragma mark - 图片相关
 FOUNDATION_EXTERN UIImage* IMAGE_LOAD(NSString* fileName);

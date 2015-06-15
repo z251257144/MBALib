@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 MBALib. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 
+#import "YYKitMacro.h"
 
 @interface NSURL (Helper)
 

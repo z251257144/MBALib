@@ -7,7 +7,6 @@
 //
 
 #import "UIControl+YYAdd.h"
-#import "YYKitMacro.h"
 
 DUMMY_CLASS(UIControl_YYDebug)
 

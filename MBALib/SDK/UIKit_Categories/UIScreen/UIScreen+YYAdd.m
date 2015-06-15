@@ -7,7 +7,6 @@
 //
 
 #import "UIScreen+YYAdd.h"
-#import "YYKitMacro.h"
 
 DUMMY_CLASS(UIScreen_YYDebug)
 

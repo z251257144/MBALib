@@ -7,7 +7,6 @@
 //
 
 #import "UIView+ActionHandlers.h"
-#import <objc/runtime.h>
 
 static char kDTActionHandlerTapBlockKey;
 static char kDTActionHandlerTapGestureKey;
