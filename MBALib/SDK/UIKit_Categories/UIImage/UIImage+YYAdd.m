@@ -80,7 +80,7 @@ DUMMY_CLASS(UIImage_YYDebug)
 
 
 - (UIImage *)imageScaledToSize:(CGSize)size {
-    if (UIGraphicsBeginImageContextWithOptions != NULL)
+    if (&UIGraphicsBeginImageContextWithOptions != NULL)
         UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     else
         UIGraphicsBeginImageContext(size);

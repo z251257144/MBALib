@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-#import "DDLog.h"
 
 typedef void (^ALActionBlock)(id weakSender);
 
-#define USER_DEFAULT                [NSUserDefaults standardUserDefaults]      //UserDefault
+#define kUserDefaults                [NSUserDefaults standardUserDefaults]      //UserDefault
 #define kDegreesToRadian(x)         (M_PI * (x) / 180.0)    //弧度转角度
 #define kRadianToDegrees(radian)    (radian*180.0)/(M_PI)   //角度转弧度
 
@@ -82,30 +81,6 @@ typedef void (^ALActionBlock)(id weakSender);
     #define SAFE_RELEASE(mValue) [mValue release];mValue=nil
     #define SUPER_DEALLOC       [super dealloc]
 #endif
-
-//安全创建MutableArray
-#define SAFE_CREATE_MUTABLEARRAY(marValue)\
-    SAFE_RELEASE(marValue);\
-    marValue = [[NSMutableArray alloc]init];\
-
-//安全创建MutableDictionary
-#define SAFE_CREATE_MUTABLEDIC(mdicValue)\
-    SAFE_RELEASE(mdicValue);\
-    mdicValue = [[NSMutableDictionary alloc] init];\
-
-//安全赋值
-#define SAFE_ASSIGN_STRING(strVarible, strValue)\
-    SAFE_RELEASE(strVarible);\
-    strVarible = [[NSString alloc] initWithFormat:@"%@", strValue];\
-
-//创建或清空可变数组
-#define CREATE_CLEAR_MUTABLEARRAY(marValue)\
-    if (marValue == nil) {\
-        marValue = [[NSMutableArray alloc] init];\
-    }\
-    else {\
-        [marValue removeAllObjects];\
-    }\
 
 
 

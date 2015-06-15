@@ -50,20 +50,21 @@
     */
     NSString * CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
     /**
-    * 大陆地区固话及小灵通
-    * 区号：010,020,021,022,023,024,025,027,028,029
-    * 号码：七位或八位
-    */
-    // NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
+     * 第三方运营商号段
+     * 177
+     */
+    NSString * TC = @"^177\\d{8}$";
     
     NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
     NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
     NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
-    if (([regextestmobile evaluateWithObject:self] == YES)
-        || ([regextestcm evaluateWithObject:self] == YES)
-        || ([regextestct evaluateWithObject:self] == YES)
-        || ([regextestcu evaluateWithObject:self] == YES)) {
+    NSPredicate *regextesttc = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", TC];
+    if ([regextestmobile evaluateWithObject:self]
+        || [regextestcm evaluateWithObject:self]
+        || [regextestct evaluateWithObject:self]
+        || [regextestcu evaluateWithObject:self]
+        || [regextesttc evaluateWithObject:self]) {
         return YES;
     }
 

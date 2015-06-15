@@ -10,7 +10,6 @@
 #import "NSObject+ExecutionHelper.h"
 #import "NSObject+ObservationHelper.h"
 #import "NSObject+AssociatedHelper.h"
-#import "NSSet+Helper.h"
 
 typedef NS_ENUM(int, BKObserverContext) {
 	BKObserverContextKey,

@@ -15,30 +15,30 @@ DUMMY_CLASS(UIView_YYAdd)
 
 @implementation UIView (YYAdd)
 
-//@dynamic cg_origin;
-//@dynamic cg_size;
-//
-//// Frame Origin
-//@dynamic cg_x;
-//@dynamic cg_y;
-//
-//// Frame Size
-//@dynamic cg_width;
-//@dynamic cg_height;
-//
-//// Frame Borders
-//@dynamic cg_top;
-//@dynamic cg_left;
-//@dynamic cg_bottom;
-//@dynamic cg_right;
-//
-//// Center Point
-//@dynamic cg_centerX;
-//@dynamic cg_centerY;
-//
-//@dynamic cg_middlePoint;
-//@dynamic cg_middleX;
-//@dynamic cg_middleY;
+@dynamic cg_origin;
+@dynamic cg_size;
+
+// Frame Origin
+@dynamic cg_x;
+@dynamic cg_y;
+
+// Frame Size
+@dynamic cg_width;
+@dynamic cg_height;
+
+// Frame Borders
+@dynamic cg_top;
+@dynamic cg_left;
+@dynamic cg_bottom;
+@dynamic cg_right;
+
+// Center Point
+@dynamic cg_centerX;
+@dynamic cg_centerY;
+
+@dynamic cg_middlePoint;
+@dynamic cg_middleX;
+@dynamic cg_middleY;
 
 - (UIImage *)snapshotImage{
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
@@ -58,10 +58,10 @@ DUMMY_CLASS(UIView_YYAdd)
     CGSize imageSizeWithBorder = CGSizeMake([image size].width + insets.left
                                             + insets.right, [image size].height
                                             + insets.top + insets.bottom);
-
+    
     UIGraphicsBeginImageContextWithOptions(imageSizeWithBorder,
-                    UIEdgeInsetsEqualToEdgeInsets(insets, UIEdgeInsetsZero), 0);
-
+                                           UIEdgeInsetsEqualToEdgeInsets(insets, UIEdgeInsetsZero), 0);
+    
     [image drawInRect:(CGRect) {{ insets.left, insets.top }, [image size] }];
     UIImage *renderedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

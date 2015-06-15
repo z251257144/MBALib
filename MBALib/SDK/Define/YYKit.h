@@ -32,7 +32,6 @@
 #import "UIColor+YYAdd.h"
 #import "UIImage+YYAdd.h"
 #import "UIControl+YYAdd.h"
-#import "UIButton+YYAdd.h"
 #import "UIView+YYAdd.h"
 #import "UIScrollView+YYAdd.h"
 #import "UIScreen+YYAdd.h"

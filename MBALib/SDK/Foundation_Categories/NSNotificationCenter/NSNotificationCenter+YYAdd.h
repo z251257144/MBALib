@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-#define NOTIF_CENTER                [NSNotificationCenter defaultCenter]
+#define kNotificationCenter                [NSNotificationCenter defaultCenter]
 
 /**
  Provide some method for `NSNotificationCenter`

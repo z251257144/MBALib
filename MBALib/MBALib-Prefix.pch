@@ -13,5 +13,4 @@
 #import "YYKitMacro.h"
 #import "YYKit.h"
 #import "Singleton.h"
-#import "Channel.h"
 /******应用包Global基本文件--end*****/

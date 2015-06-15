@@ -13,13 +13,7 @@
 + (instancetype)noticeWithTitle:(NSString*)title message:(NSString*)message buttonTitle:(NSString*)buttonTitle
                      completion:(void (^)())completion;
 
-+ (instancetype)inputWithTitle:(NSString*)title submission:(void (^)(NSString* text))submission;
-
-+ (instancetype)confirmationWithTitle:(NSString*)title confirmation:(void (^)())confirmation;
-
-- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message
-            cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSArray*)otherButtonTitles
-                   completion:(void (^)(NSInteger buttonIndex))completion;
+- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle :(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
 
 - (void)setCompletionBlock:(void (^)(NSInteger buttonIndex))completion;
 
