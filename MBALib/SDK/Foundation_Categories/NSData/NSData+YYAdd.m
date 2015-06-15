@@ -16,7 +16,7 @@ DUMMY_CLASS(NSData_YYAdd)
 
 - (NSString *)md5String {
     unsigned char result[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(self.bytes, self.length, result);
+    CC_MD5(self.bytes, (CC_LONG)self.length, result);
     return [NSString stringWithFormat:
             @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
             result[0], result[1], result[2], result[3],
@@ -28,12 +28,12 @@ DUMMY_CLASS(NSData_YYAdd)
 
 - (NSData *)md5Data {
     unsigned char result[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(self.bytes, self.length, result);
+    CC_MD5(self.bytes, (CC_LONG)self.length, result);
     return [NSData dataWithBytes:result length:CC_MD5_DIGEST_LENGTH];
 }
 
 - (NSString *)hexString {
-    unsigned int length = self.length;
+    NSUInteger length = self.length;
     NSMutableString *result = [NSMutableString stringWithCapacity:length * 2];
     const unsigned char *byte = self.bytes;
     for (int i = 0; i<length; i++,byte++) {

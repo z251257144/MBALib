@@ -57,10 +57,3 @@ enum {
 - (NSString *)stringByRemovingString:(NSString *)removeString;
 
 @end
-
-
-@interface NSString (Truncation)
-
-- (NSString*)stringByTruncatingToWidth:(CGFloat)width withFont:(UIFont *)font;
-
-@end

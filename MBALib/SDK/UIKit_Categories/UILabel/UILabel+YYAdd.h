@@ -10,7 +10,4 @@
 
 @interface UILabel (YYAdd)
 
--(float)resizeToFit;
--(float)expectedHeight;
-
 @end
