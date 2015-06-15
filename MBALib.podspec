@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT (example)"
   s.author             = { "z251257144" => "email@address.com" }
   s.source       = { :git => "https://github.com/z251257144/MBALib.git", :tag => s.version }
-  s.source_files  = "MBALib", "MBALib/**/*.{h,m}"
+  s.source_files  = "SDK", "SDK/**/*.{h,m,bundle}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
