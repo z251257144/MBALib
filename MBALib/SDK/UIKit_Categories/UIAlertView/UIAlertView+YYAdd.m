@@ -43,7 +43,7 @@ static id kUIAlertView_BBExtensionsCompletionBlockKey;
 }
 
 
-- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle :(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION
+- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION
 {
     return [self initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles, nil];
 }
