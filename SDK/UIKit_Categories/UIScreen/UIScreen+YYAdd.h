@@ -8,7 +8,9 @@
 
 #import "YYKitMacro.h"
 
-#define kAppScreen  [UIScreen mainScreen]
+#define kAppScreen          [UIScreen mainScreen]
+#define kMainScreenWidth    [UIScreen mainScreen].width
+#define kMainScreenHeight   [UIScreen mainScreen].height
 
 // Provide some some common method for `UIScreen`.
 @interface UIScreen (YYAdd)

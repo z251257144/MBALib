@@ -24,6 +24,13 @@
     [self insertRowAtIndexPath:toInsert withRowAnimation:animation];
 }
 
+- (void)insertSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)animation
+{
+    NSIndexSet* indexSet = [NSIndexSet indexSetWithIndex:section];
+    [self insertSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+
 - (void)reloadRowAtIndexPath:(NSIndexPath*)indexPath withRowAnimation:(UITableViewRowAnimation)animation
 {
     [self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:animation];
@@ -34,6 +41,13 @@
     NSIndexPath* toReload = [NSIndexPath indexPathForRow:row inSection:section];
     [self reloadRowAtIndexPath:toReload withRowAnimation:animation];
 }
+
+- (void)reloadSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)animation
+{
+    NSIndexSet* indexSet = [NSIndexSet indexSetWithIndex:section];
+    [self reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 - (void)deleteRowAtIndexPath:(NSIndexPath*)indexPath withRowAnimation:(UITableViewRowAnimation)animation
 {
@@ -52,10 +66,6 @@
     [self deleteSections:sections withRowAnimation:animation];
 }
 
-- (void)reloadSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)animation
-{
-    NSIndexSet* indexSet = [NSIndexSet indexSetWithIndex:section];
-    [self reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
-}
+
 
 @end
