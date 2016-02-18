@@ -50,7 +50,7 @@
 	if( object ) [info setObject:object forKey:@"object"];
 	if( userInfo ) [info setObject:userInfo forKey:@"userInfo"];
     
-	[[self class] performSelectorOnMainThread:@selector( _postNotificationName: ) withObject:info waitUntilDone:wait];
+	[NSNotificationCenter performSelectorOnMainThread:@selector( _postNotificationName: ) withObject:info waitUntilDone:wait];
     
 }
 
@@ -59,6 +59,6 @@
 	id object = [info objectForKey:@"object"];
 	NSDictionary *userInfo = [info objectForKey:@"userInfo"];
     
-	[[self defaultCenter] postNotificationName:name object:object userInfo:userInfo];
+	[[NSNotificationCenter defaultCenter] postNotificationName:name object:object userInfo:userInfo];
 }
 @end

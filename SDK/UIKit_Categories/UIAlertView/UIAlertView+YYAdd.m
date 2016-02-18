@@ -29,7 +29,7 @@ static id kUIAlertView_BBExtensionsCompletionBlockKey;
 + (instancetype)noticeWithTitle:(NSString*)title message:(NSString*)message buttonTitle:(NSString*)buttonTitle
                      completion:(void (^)())completion
 {
-    UIAlertView* alertView = [[[self class] alloc]
+    UIAlertView* alertView = [[UIAlertView alloc]
                               initWithTitle:title message:message delegate:nil
                               cancelButtonTitle:buttonTitle otherButtonTitles:nil];
     alertView.delegate = alertView;
