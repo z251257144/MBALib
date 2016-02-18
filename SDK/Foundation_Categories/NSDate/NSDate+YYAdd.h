@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSDate+Helper.h"
 
 #define DATE_FORMAT_DT_HHmmss           @"yyyyMMddHHmmss"
 #define DATE_FORMAT_DT_HHmm             @"yyyyMMddHHmm"

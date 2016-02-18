@@ -26,7 +26,6 @@
 		5884BFE61B2EC5C000568265 /* NSArray+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884BF641B2EC5C000568265 /* NSArray+YYAdd.m */; };
 		5884BFE71B2EC5C000568265 /* NSMutableArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884BF661B2EC5C000568265 /* NSMutableArray+Helper.m */; };
 		5884BFE81B2EC5C000568265 /* NSData+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884BF691B2EC5C000568265 /* NSData+YYAdd.m */; };
-		5884BFE91B2EC5C000568265 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884BF6C1B2EC5C000568265 /* NSDate+Helper.m */; };
 		5884BFEA1B2EC5C000568265 /* NSDate+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884BF6E1B2EC5C000568265 /* NSDate+YYAdd.m */; };
 		5884BFEB1B2EC5C000568265 /* NSDictionary+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884BF711B2EC5C000568265 /* NSDictionary+Helper.m */; };
 		5884BFEC1B2EC5C000568265 /* NSDictionary+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884BF731B2EC5C000568265 /* NSDictionary+YYAdd.m */; };
@@ -126,8 +125,6 @@
 		5884BF661B2EC5C000568265 /* NSMutableArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Helper.m"; sourceTree = "<group>"; };
 		5884BF681B2EC5C000568265 /* NSData+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YYAdd.h"; sourceTree = "<group>"; };
 		5884BF691B2EC5C000568265 /* NSData+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YYAdd.m"; sourceTree = "<group>"; };
-		5884BF6B1B2EC5C000568265 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
-		5884BF6C1B2EC5C000568265 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		5884BF6D1B2EC5C000568265 /* NSDate+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YYAdd.h"; sourceTree = "<group>"; };
 		5884BF6E1B2EC5C000568265 /* NSDate+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YYAdd.m"; sourceTree = "<group>"; };
 		5884BF701B2EC5C000568265 /* NSDictionary+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helper.h"; sourceTree = "<group>"; };
@@ -423,8 +420,6 @@
 		5884BF6A1B2EC5C000568265 /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
-				5884BF6B1B2EC5C000568265 /* NSDate+Helper.h */,
-				5884BF6C1B2EC5C000568265 /* NSDate+Helper.m */,
 				5884BF6D1B2EC5C000568265 /* NSDate+YYAdd.h */,
 				5884BF6E1B2EC5C000568265 /* NSDate+YYAdd.m */,
 			);
@@ -909,7 +904,6 @@
 				5884BFE51B2EC5C000568265 /* NSArray+Helper.m in Sources */,
 				5884C0041B2EC5C000568265 /* UIAlertView+YYAdd.m in Sources */,
 				5884BFF71B2EC5C000568265 /* NSObject+ObservationHelper.m in Sources */,
-				5884BFE91B2EC5C000568265 /* NSDate+Helper.m in Sources */,
 				5884C0011B2EC5C000568265 /* NSURL+YYAdd.m in Sources */,
 				5884BFE31B2EC5C000568265 /* FTAnimationManager.m in Sources */,
 				5884BFEB1B2EC5C000568265 /* NSDictionary+Helper.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "YYKitMacro.h"
-#import <MBProgressHUD.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #define HUD_WARN                @"MBProgressHUD.bundle/images/mb_warn"
 #define HUD_ERROR               @"MBProgressHUD.bundle/images/mb_error"
