@@ -13,9 +13,9 @@
 
 
 - (instancetype)initWithBlock:(ALActionBlock)actionBlock {
-    UIGestureRecognizer *gestureRecognizer = [[UIGestureRecognizer alloc] init];
-    [gestureRecognizer setBlock:actionBlock];
-    return gestureRecognizer;
+    self = [self init];
+    [self setBlock:actionBlock];
+    return self;
 }
 
 
