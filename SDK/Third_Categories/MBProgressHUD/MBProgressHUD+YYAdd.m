@@ -29,7 +29,7 @@ static char kNeedHiddenWhenTapedKey;
     if (!tap) {
         [self setTapActionWithBlock:^{
             if (weakSelf.needHiddenWhenTaped) {
-                [weakSelf hide:YES];
+                [weakSelf hideAnimated:YES];
                 [weakSelf removeFromSuperview];
             };
         }];
@@ -45,7 +45,7 @@ static char kNeedHiddenWhenTapedKey;
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:inView];
     [inView addSubview:hud];
     if (title.length) {
-        hud.labelText = title;
+        hud.label.text = title;
     }
     hud.mode = MBProgressHUDModeIndeterminate;
     return hud;
@@ -54,7 +54,7 @@ static char kNeedHiddenWhenTapedKey;
 + (MBProgressHUD*)showProgressViewWithTitile:(NSString*)title InView:(UIView*)inView
 {
     MBProgressHUD *hud = [MBProgressHUD progressViewWithTitile:title InView:inView];
-    [hud show:YES];
+    [hud showAnimated:YES];
     return hud;
 }
 
@@ -62,14 +62,14 @@ static char kNeedHiddenWhenTapedKey;
 {
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     [view addSubview:hud];
-    hud.labelText = @"您当前的网络异常";
+    hud.label.text = @"您当前的网络异常";
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"warning_network.png"]];
     hud.customView = imageView;
     hud.mode = MBProgressHUDModeCustomView;
     hud.removeFromSuperViewOnHide = YES;
     hud.needHiddenWhenTaped = YES;
-    [hud show:YES];
-    [hud hide:YES afterDelay:10];
+    [hud showAnimated:YES];
+    [hud hideAnimated:YES afterDelay:5];
 }
 
 + (void)showPromptViewTappedHideInView:(UIView*) view Title:(NSString*)title delay:(NSTimeInterval)delay
@@ -91,10 +91,10 @@ static char kNeedHiddenWhenTapedKey;
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     [view addSubview:hud];
     if (title) {
-        hud.labelText = title;
+        hud.label.text = title;
     }
     if (detail) {
-        hud.detailsLabelText = detail;
+        hud.detailsLabel.text = detail;
     }
     if (!CGPointEqualToPoint(point, CGPointZero)) {
         hud.center = point;
@@ -102,8 +102,8 @@ static char kNeedHiddenWhenTapedKey;
     hud.mode = MBProgressHUDModeCustomView;
     hud.removeFromSuperViewOnHide = YES;
     hud.needHiddenWhenTaped = YES;
-    [hud show:YES];
-    [hud hide:YES afterDelay:delay];
+    [hud showAnimated:YES];
+    [hud hideAnimated:YES afterDelay:delay];
 }
 
 + (void)showPromptViewInWindow:(UIImage*)image message:(NSString*)message
@@ -124,17 +124,17 @@ static char kNeedHiddenWhenTapedKey;
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     hud.customView = imageView;
     
-    hud.labelText = title;
-    hud.labelFont = [UIFont boldSystemFontOfSize:15.0f];
+    hud.label.text = title;
+    hud.label.font = [UIFont boldSystemFontOfSize:15.0f];
     
-    hud.detailsLabelText = detail;
-    hud.detailsLabelFont = [UIFont boldSystemFontOfSize:13.0f];
+    hud.detailsLabel.text = detail;
+    hud.detailsLabel.font = [UIFont boldSystemFontOfSize:13.0f];
     
     hud.mode = MBProgressHUDModeCustomView;
     hud.removeFromSuperViewOnHide = YES;
     hud.needHiddenWhenTaped = YES;
-    [hud show:YES];
-    [hud hide:YES afterDelay:delay];
+    [hud showAnimated:YES];
+    [hud hideAnimated:YES afterDelay:delay];
 }
 
 + (void)showMessag:(NSString *)message
@@ -142,13 +142,13 @@ static char kNeedHiddenWhenTapedKey;
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     
     // 快速显示一个提示信息
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithWindow:window];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:window];
     [window addSubview:hud];
-    hud.labelText = message;
+    hud.label.text = message;
     hud.mode = MBProgressHUDModeText;
     hud.removeFromSuperViewOnHide = YES;
-    [hud show:YES];
-    [hud hide:YES afterDelay:1.5f];
+    [hud showAnimated:YES];
+    [hud hideAnimated:YES afterDelay:1.5f];
 }
 
 

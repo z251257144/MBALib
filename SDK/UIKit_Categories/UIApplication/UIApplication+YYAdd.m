@@ -76,30 +76,4 @@ NSString *NSBundleFolder() {
     return [[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 
-- (void)setApplicationStyle:(UIStatusBarStyle)style animated:(BOOL)animated {
-	[self setApplicationStyle:style animated:animated defaultBackgroundColor:[UIColor whiteColor]];
-}
-
-- (void)setApplicationStyle:(UIStatusBarStyle)style animated:(BOOL)animated defaultBackgroundColor:(UIColor*)defaultBackgroundColor {
-	[self setStatusBarStyle:style animated:animated];
-	
-	UIColor* newBackgroundColor = style == UIStatusBarStyleDefault ? defaultBackgroundColor : [UIColor blackColor];
-	UIColor* oldBackgroundColor = style == UIStatusBarStyleDefault ? [UIColor blackColor] : defaultBackgroundColor;
-	
-	if(animated) {
-	    [CATransaction setValue:[NSNumber numberWithFloat:0.3] forKey:kCATransactionAnimationDuration];
-		
-		CABasicAnimation* fadeAnimation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
-		fadeAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-		fadeAnimation.fromValue = (id)oldBackgroundColor.CGColor;
-		fadeAnimation.toValue = (id)newBackgroundColor.CGColor;
-		fadeAnimation.fillMode = kCAFillModeForwards;
-		fadeAnimation.removedOnCompletion = NO;
-		[self.keyWindow.layer addAnimation:fadeAnimation forKey:@"fadeAnimation"];
-		[CATransaction commit];
-	} else {
-		self.keyWindow.backgroundColor = newBackgroundColor;
-	}
-}
-
 @end

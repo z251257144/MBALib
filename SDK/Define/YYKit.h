@@ -36,8 +36,6 @@
 #import "UIScreen+YYAdd.h"
 #import "UIDevice+YYAdd.h"
 #import "UIApplication+YYAdd.h"
-#import "UIActionSheet+YYAdd.h"
-#import "UIAlertView+YYAdd.h"
 #import "UIBarButtonItem+YYAdd.h"
 #import "UIGestureRecognizer+YYAdd.h"
 #import "UITableView+YYAdd.h"

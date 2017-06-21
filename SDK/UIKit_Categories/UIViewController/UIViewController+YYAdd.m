@@ -45,7 +45,7 @@ static BOOL _staticFirstUse = NO;
 {
 	CGRect bounds = [UIScreen mainScreen].bounds;
     
-	if ( UIInterfaceOrientationIsLandscape(self.interfaceOrientation) )
+	if ( UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
 	{
 		bounds.origin = CGPointMake( bounds.origin.y, bounds.origin.x );
 		bounds.size = CGSizeMake( bounds.size.height, bounds.size.width );

@@ -88,7 +88,7 @@ DUMMY_CLASS(NSDate_YYAdd)
     [comps setYear:year];
     [comps setMonth:month];
     [comps setDay:day];
-    NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate *mDate = [calender dateByAddingComponents:comps toDate:self options:0];
     G_AUTORELEASE(comps);
     G_AUTORELEASE(calender);

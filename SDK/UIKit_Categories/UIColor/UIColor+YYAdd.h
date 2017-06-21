@@ -26,10 +26,6 @@
 
 /*!
  *  @brief Initialize color from 32bit color component
- *  @param red、green、blue
- *      Value from 0 to 255
- *  @param alpha
- *      Value from 0 to 1.0f
  */
 + (UIColor *)colorWithIntRed:(int)red green:(int)green blue:(int)blue alpha:(float)alpha;
 
